@@ -10,6 +10,10 @@ public class SuggestGetSet {
         this.setId(id);
         this.setName(label);
     }
+    @Override
+    public String toString(){
+        return id;
+    }
     public String getId() {
         return id;
     }

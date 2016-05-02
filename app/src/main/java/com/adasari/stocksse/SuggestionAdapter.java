@@ -5,16 +5,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
+import android.widget.TextView;
 
 
-public class SuggestionAdapter extends ArrayAdapter<String> {
+public class SuggestionAdapter extends ArrayAdapter<SuggestGetSet> {
     protected static final String TAG = "SuggestionAdapter";
-    private List<String> suggestions;
-    public SuggestionAdapter(Activity context, String nameFilter) {
-        super(context, android.R.layout.simple_dropdown_item_1line);
-        suggestions = new ArrayList<String>();
+    private List<SuggestGetSet> suggestions;
+    private int viewResourceId;
+
+    public SuggestionAdapter(Activity context, int viewResourceId, String nameFilter) {
+        super(context, viewResourceId);
+        suggestions = new ArrayList<SuggestGetSet>();
+        this.viewResourceId = viewResourceId;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent){
+        View v = convertView;
+        if (v == null){
+            LayoutInflater vi = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v = vi.inflate(viewResourceId, null);
+        }
+        SuggestGetSet suggestion = getItem(position);
+        if(suggestion != null){
+            TextView stockOptionSymbol = (TextView) v.findViewById(R.id.stockSymbol);
+            TextView stockOptionName = (TextView) v.findViewById(R.id.stockName);
+            if(stockOptionName!=null && stockOptionSymbol!=null){
+                stockOptionName.setText(suggestion.getName());
+                stockOptionSymbol.setText(suggestion.getId());
+            }
+        }
+        return v;
     }
 
     @Override
@@ -23,7 +50,7 @@ public class SuggestionAdapter extends ArrayAdapter<String> {
     }
 
     @Override
-    public String getItem(int index) {
+    public SuggestGetSet getItem(int index) {
         return suggestions.get(index);
     }
 
@@ -40,7 +67,7 @@ public class SuggestionAdapter extends ArrayAdapter<String> {
                     List<SuggestGetSet> new_suggestions = jp.getParseJsonWCF(constraint.toString());
                     suggestions.clear();
                     for (int i=0;i<new_suggestions.size();i++) {
-                        suggestions.add(new_suggestions.get(i).getName());
+                        suggestions.add(new_suggestions.get(i));
                     }
 
                     // Now assign the values and count to the FilterResults
@@ -52,8 +79,7 @@ public class SuggestionAdapter extends ArrayAdapter<String> {
             }
 
             @Override
-            protected void publishResults(CharSequence constraint,
-                                          FilterResults results) {
+            protected void publishResults(CharSequence constraint, FilterResults results) {
                 if (results != null && results.count > 0) {
                     notifyDataSetChanged();
                 } else {

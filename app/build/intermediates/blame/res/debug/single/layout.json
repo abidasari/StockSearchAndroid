@@ -100,6 +100,10 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/autocomplete_view.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/src/main/res/layout/autocomplete_view.xml"
+    },
+    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/activity_launcher.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/src/main/res/layout/activity_launcher.xml"
     },

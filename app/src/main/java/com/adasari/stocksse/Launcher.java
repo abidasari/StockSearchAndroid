@@ -62,9 +62,11 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         });
 
         actextview = (AutoCompleteTextView) findViewById(R.id.autoComplete);
+        SuggestionAdapter suggestionAdapter = new SuggestionAdapter(this, R.layout.autocomplete_view, actextview.getText().toString());
+        actextview.setAdapter(suggestionAdapter);
         actextview.setOnItemClickListener(this);
 
-        actextview.setAdapter(new SuggestionAdapter(this, actextview.getText().toString()));
+//        actextview.setAdapter(new SuggestionAdapter(this, actextview.getText().toString()));
 
     }
 
@@ -78,7 +80,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
     public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
         Log.i(TAG, "onItemClick");
         String selected = actextview.getText().toString();
-        Log.i(TAG, "Grabbed: "+ selected);
+        Log.i(TAG, "Grabbed: "+ this);
 
         if (selected != "" && !selected.equals("No Results Found")){
             // An item has been selected from the list.
