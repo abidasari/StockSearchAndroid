@@ -140,6 +140,10 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/activity_stock_info.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/src/main/res/layout/activity_stock_info.xml"
+    },
+    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
