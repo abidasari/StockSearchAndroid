@@ -1,3 +1,2 @@
 CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$override.class
-CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/Launcher$override.class
 CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class

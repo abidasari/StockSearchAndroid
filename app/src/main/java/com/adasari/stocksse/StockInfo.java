@@ -1,6 +1,8 @@
 package com.adasari.stocksse;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.NavUtils;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -32,20 +34,29 @@ public class StockInfo extends AppCompatActivity {
             return;
         }
         selectedStock = receivedStock.getString("Selected");
+        setTitle(selectedStock);
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+        ViewPager pager = (ViewPager) findViewById(R.id.pager);
+        ViewPgerAdapter viewPgerAdapter = new ViewPgerAdapter(getSupportFragmentManager());
+        viewPgerAdapter.addFragments(new CurrentFragment(), "Current");
+        viewPgerAdapter.addFragments(new HighChartsFragment(), "Historical");
+        viewPgerAdapter.addFragments(new NewsFeedFragment(), "News");
+        pager.setAdapter(viewPgerAdapter);
+        tabs.setupWithViewPager(pager);
 
-        try{
-            URL js = new URL("http://stocksearch-1276.appspot.com/stocksearch.php?stockselect="+selectedStock);
-            URLConnection jc = js.openConnection();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(jc.getInputStream()));
-            String line = reader.readLine();
-            TextView debug2 = (TextView) findViewById(R.id.debug2);
-            debug2.setText(line);
-            Log.i(TAG, "ACT2-onCreate.line = " + line);
-        }
-        catch (Exception e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
+//        try{
+//            URL js = new URL("http://stocksearch-1276.appspot.com/stocksearch.php?stockselect="+selectedStock);
+//            URLConnection jc = js.openConnection();
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(jc.getInputStream()));
+//            String line = reader.readLine();
+////            TextView debug2 = (TextView) findViewById(R.id.debug2);
+////            debug2.setText(line);
+//            Log.i(TAG, "ACT2-onCreate.line = " + line);
+//        }
+//        catch (Exception e1) {
+//            // TODO Auto-generated catch block
+//            e1.printStackTrace();
+//        }
 
 
     }

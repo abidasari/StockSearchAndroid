@@ -48,6 +48,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         actextview.setAdapter(suggestionAdapter);
         actextview.setOnItemClickListener(this);
 
+        assert getQuotesButton != null;
         getQuotesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,21 +57,23 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                     Intent inten = new Intent(getApplicationContext(), StockInfo.class);
                     selectedStock = actextview.getText().toString();
                     inten.putExtra("Selected", selectedStock);
+                    inten.putExtra("JSON", "");
                     startActivity(inten);
                 }
                 else{
                     Log.i(TAG, "getQuotesButton.setOnClickListener.onClick - invalid selection");
                 }
             }
-        });
+        }); // Get Quotes Button Listener
 
         ImageButton refreshButton = (ImageButton)findViewById(R.id.refreshButton);
+        assert refreshButton != null;
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "refreshButton.setOnClickListener.onClick");
             }
-        });
+        }); // Refresh Button Listener
 
         Switch autoRefreshToggle = (Switch)findViewById(R.id.autorefreshSwitch);
         autoRefreshToggle.setChecked(false); // is set to unchecked by default
@@ -83,16 +86,17 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                     Log.i(TAG, "autoRefreshToggle.setOnCheckedChangeListener.isUnChecked");
                 }
             }
-        });
+        }); // Auto Refresh Button Listener
 
         Button clearButton = (Button)findViewById(R.id.clearButton);
+        assert clearButton != null;
         clearButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Log.i(TAG, "clearButton.setOnClickListener.onClick");
                 actextview.setText("");
             }
-        });
+        }); // Clear Button Listener
 
 
 
