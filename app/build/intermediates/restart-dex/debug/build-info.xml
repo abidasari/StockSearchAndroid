@@ -4,36 +4,49 @@
     api-level="22"
     density="xxhdpi"
     format="7"
-    timestamp="119226092885039" >
+    timestamp="28091383577909" >
 
     <task
         name="javac"
-        duration="639" />
+        duration="1239" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="58" />
+        duration="134" />
     <task
         name="verifier"
-        duration="34" />
+        duration="48" />
 
+    <artifact
+        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
     <artifact
         location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
         type="DEX" />
 
-    <build timestamp="117296856030537" >
+    <build timestamp="26322546500370" >
         <artifact
             location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="118896372726238" >
+    <build timestamp="28091383577909" >
         <artifact
             location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
-    </build>
-    <build timestamp="119226092885039" >
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
         <artifact
             location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
             type="DEX" />

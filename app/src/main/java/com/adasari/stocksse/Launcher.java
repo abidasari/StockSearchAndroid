@@ -1,18 +1,24 @@
 package com.adasari.stocksse;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.text.Editable;
 
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Filter;
 import android.widget.Switch;
 
 import android.text.TextWatcher;
@@ -21,6 +27,7 @@ import android.widget.AdapterView;
 
 import android.widget.ImageButton;
 import android.content.Intent;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +35,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Launcher extends AppCompatActivity implements TextWatcher, OnItemClickListener {
@@ -44,6 +53,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setIcon(R.mipmap.ic_launcher);
         Log.i(TAG, "ACT1-onCreate");
@@ -51,6 +61,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         Button getQuotesButton = (Button)findViewById(R.id.getQuotesButton);
 
         actextview = (AutoCompleteTextView) findViewById(R.id.autoComplete);
+        assert actextview != null;
         SuggestionAdapter suggestionAdapter = new SuggestionAdapter(this, R.layout.autocomplete_view, actextview.getText().toString());
         actextview.setAdapter(suggestionAdapter);
         actextview.setOnItemClickListener(this);
@@ -115,7 +126,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
     public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
         Log.i(TAG, "ACT1-onItemClick");
         String selected = actextview.getText().toString();
-        if (selected != "" && !selected.equals("No Results Found")){
+        if (!selected.equals("") && !selected.equals("No Results Found")){
             // An item has been selected from the list.
             validtextselectedfromlist = true;
             Log.i(TAG, "ACT1-Grabbed Text: " + selected);
@@ -207,13 +218,14 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                 Intent inten = new Intent(getApplicationContext(), StockInfo.class);
                 inten.putExtra("Selected", selectedStock);
                 inten.putExtra("JSONStockInfo", result);
-                Log.i(TAG, "ACT1-JSON RESULT - - - " + JSONResult);
+                Log.i(TAG, "ACT1-JSON RESULT - - - - - " + JSONResult);
                 Launcher.this.startActivity(inten);
             }
             catch (Exception e){
                 e.printStackTrace();
             }
         }
+
 
         @Override
         protected void onPreExecute() {
@@ -225,5 +237,82 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
 
         }
     }
+    public class SuggestionAdapter extends ArrayAdapter<SuggestGetSet> {
+        protected static final String TAG = "SuggestionAdapter";
+        private List<SuggestGetSet> suggestions;
+        private int viewResourceId;
+
+        public SuggestionAdapter(Activity context, int viewResourceId, String nameFilter) {
+            super(context, viewResourceId);
+            suggestions = new ArrayList<SuggestGetSet>();
+            this.viewResourceId = viewResourceId;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent){
+            View v = convertView;
+            if (v == null){
+                LayoutInflater vi = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(viewResourceId, null);
+            }
+            SuggestGetSet suggestion = getItem(position);
+            if(suggestion != null){
+                TextView stockOptionSymbol = (TextView) v.findViewById(R.id.stockSymbol);
+                TextView stockOptionName = (TextView) v.findViewById(R.id.stockName);
+                if(stockOptionName!=null && stockOptionSymbol!=null){
+                    stockOptionName.setText(suggestion.getName());
+                    stockOptionSymbol.setText(suggestion.getId());
+                }
+            }
+            return v;
+        }
+
+        @Override
+        public int getCount() {
+            return suggestions.size();
+        }
+
+        @Override
+        public SuggestGetSet getItem(int index) {
+            return suggestions.get(index);
+        }
+
+        @Override
+        public Filter getFilter() {
+            Filter myFilter = new Filter() {
+                @Override
+                protected FilterResults performFiltering(CharSequence constraint) {
+                    FilterResults filterResults = new FilterResults();
+                    JsonParse jp=new JsonParse();
+                    if (constraint != null) {
+                        // A class that queries a web API, parses the data and
+                        // returns an ArrayList<GoEuroGetSet>
+                        List<SuggestGetSet> new_suggestions = jp.getParseJsonWCF(constraint.toString());
+                        suggestions.clear();
+                        for (int i=0;i<new_suggestions.size();i++) {
+                            suggestions.add(new_suggestions.get(i));
+                        }
+
+                        // Now assign the values and count to the FilterResults
+                        // object
+                        filterResults.values = suggestions;
+                        filterResults.count = suggestions.size();
+                    }
+                    return filterResults;
+                }
+
+                @Override
+                protected void publishResults(CharSequence constraint, FilterResults results) {
+                    if (results != null && results.count > 0) {
+                        notifyDataSetChanged();
+                    } else {
+                        notifyDataSetInvalidated();
+                    }
+                }
+            };
+            return myFilter;
+        }
+    }
+
 
 }

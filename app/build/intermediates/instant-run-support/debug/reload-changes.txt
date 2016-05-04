@@ -1,3 +1,12 @@
-CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/Launcher$override.class
-CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/Launcher$Communicator$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$layout$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$style$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/v7/appcompat/R$id$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$StockInfoAdapter$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$integer$override.class
 CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$mipmap$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$string$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$styleable$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/design/R$id$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$CurrentFragment$CurrentStockTask$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/R$id$override.class

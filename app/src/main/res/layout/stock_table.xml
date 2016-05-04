@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:textColor="#000"
         android:text="Stock Symbol Here"
-        android:textSize="15dp" />
+        android:textSize="12dp" />
 
     <TextView
         android:id="@+id/stockValue"
@@ -24,6 +24,15 @@
         android:textStyle="bold"
         android:textColor="#000"
         android:layout_marginTop="5dp"
-        android:textSize="24dp" />
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:id="@+id/stockTrendImage"
+        android:layout_below="@+id/stockAttribute"
+        android:layout_toEndOf="@+id/stockValue"
+        android:layout_marginTop="12dp" />
+
 
 </RelativeLayout>

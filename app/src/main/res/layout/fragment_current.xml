@@ -1,11 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.adasari.stocksse.CurrentFragment">
+    android:layout_height="match_parent">
+    <!--tools:context="com.adasari.stocksse.CurrentFragment">-->
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/currentStocks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Current Stocks"
@@ -15,6 +16,11 @@
         android:textStyle="bold"
         android:textColor="#000000"/>
 
+    <!--<TableLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <!---->
+    <!--</TableLayout>-->
 
     <ListView
         android:layout_width="match_parent"
@@ -25,4 +31,5 @@
     </ListView>
 
 
-</FrameLayout>
+
+</RelativeLayout>
