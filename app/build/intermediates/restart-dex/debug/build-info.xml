@@ -4,47 +4,26 @@
     api-level="22"
     density="xxhdpi"
     format="7"
-    timestamp="80873525997973" >
+    timestamp="89239781791214" >
 
     <task
         name="javac"
-        duration="477" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="108" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
-    <artifact
-        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-        type="DEX" />
-
-    <build timestamp="79252151845096" >
+    <build timestamp="89179118468327" >
         <artifact
             location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="80457223888818"
-        verifier="FIELD_ADDED" >
-        <artifact
-            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="80873525997973" >
-        <artifact
-            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-    </build>
+    <build timestamp="89239781791214" />
 
 </instant-run>

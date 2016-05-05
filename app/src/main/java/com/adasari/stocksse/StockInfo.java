@@ -18,11 +18,19 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.util.Log;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -267,10 +275,7 @@ public class StockInfo extends AppCompatActivity {
         }
     }
 
-
-
-
-
+    @SuppressLint("ValidFragment")
     public class HighChartsFragment extends Fragment {
         public HighChartsFragment() {
             // Required empty public constructor
@@ -278,16 +283,14 @@ public class StockInfo extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            Log.i(TAG, "ACT2 HighChartsFragment.onCreateView");
+            Log.i(TAG, "ACT2 HighChartsFragment.onCreateView "+selectedStockSymbol );
             View rootView = inflater.inflate(R.layout.fragment_high_charts, container, false);
             HighChartsTask highChartsTask = new HighChartsTask();
-
-
+            highChartsTask.execute("");
             return rootView;
         }
 
-        private class HighChartsTask extends AsyncTask<String, Integer, String>{
-
+        private class HighChartsTask extends AsyncTask<String, Integer, String> {
             @Override
             protected String doInBackground(String... strings) {
                 return null;
@@ -296,6 +299,11 @@ public class StockInfo extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+                String url = "http://www-scf.usc.edu/~adasari/h0m3w0rk8/gethighchatrs.html?selectedStockSymbol=" + selectedStockSymbol;
+                WebView webView = (WebView) findViewById(R.id.webView);
+//            assert webView != null;
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.loadUrl(url);
             }
         }
     }
