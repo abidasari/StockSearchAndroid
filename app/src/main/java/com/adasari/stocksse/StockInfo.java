@@ -2,6 +2,7 @@ package com.adasari.stocksse;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.test.suitebuilder.TestMethod;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
@@ -35,6 +37,7 @@ public class StockInfo extends AppCompatActivity {
     private static final String TAG = "adasari";
     private static final String TAG_JSON = "json";
     public String JSONObjectString;
+    public String selectedStockSymbol;
 
     ArrayList<HashMap<String, String>> oslist = new ArrayList<HashMap<String, String>>();
 
@@ -49,6 +52,14 @@ public class StockInfo extends AppCompatActivity {
             return;
         }
         JSONObjectString = launcherData.getString("JSONStockInfo");
+        try {
+            JSONObject jsonObject = new JSONObject(JSONObjectString);
+            setTitle(jsonObject.getString("Name"));
+            selectedStockSymbol  = jsonObject.getString("Symbol");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
 
         Log.i(TAG, "ACT2-onCreate");
 
@@ -57,7 +68,7 @@ public class StockInfo extends AppCompatActivity {
             return;
         }
         selectedStock = receivedStock.getString("Selected");
-        setTitle(selectedStock);
+
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
         ViewPgerAdapter viewPgerAdapter = new ViewPgerAdapter(getSupportFragmentManager());
@@ -117,7 +128,6 @@ public class StockInfo extends AppCompatActivity {
         }
 
         private class CurrentStockTask extends AsyncTask<String, Integer, String>{
-
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
@@ -138,73 +148,115 @@ public class StockInfo extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 try{
-                    ListView listView = (ListView) findViewById(R.id.stockTable);
+
                     JSONObject jsonObject = new JSONObject(s);
                     Log.i(TAG_JSON, "ACT2-JSON from intent  - --- " + jsonObject);
-//                    TextView currentStocks = (TextView) findViewById(R.id.currentStocks);
-//                    currentStocks.setText(jsonObject.getString("Name"));
-                    ArrayList<StockVal> list = new ArrayList<StockVal>();
-                    StockVal row1 = new StockVal("NAME", jsonObject.getString("Name"), "");
-                    StockVal row2 = new StockVal("SYMBOL", jsonObject.getString("Symbol"), "");
-                    StockVal row3 = new StockVal("LASTPRICE", jsonObject.getString("LastPrice"), "");
-                    StockVal row4; //= new StockVal("CHANGE", jsonObject.getString("Change"), "");
+
+                    TextView test = (TextView) findViewById(R.id.stockAttribute1);
+                    test.setText("NAME");
+                    test = (TextView) findViewById(R.id.stockValue1);
+                    test.setText(jsonObject.getString("Name"));
+                    ImageView iw = (ImageView) findViewById(R.id.stockTrendImage1);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute2);
+                    test.setText("SYMBOL");
+                    test = (TextView) findViewById(R.id.stockValue2);
+                    test.setText(jsonObject.getString("Symbol"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage2);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute3);
+                    test.setText("LASTPRICE");
+                    test = (TextView) findViewById(R.id.stockValue3);
+                    test.setText(jsonObject.getString("LastPrice"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage3);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute4);
+                    test.setText("CHANGE");
+                    test = (TextView) findViewById(R.id.stockValue4);
                     double change = Double.valueOf(jsonObject.getString("Change"));
                     String c = String.format("%.2f", change);
                     double changepercent = Double.valueOf(jsonObject.getString("ChangePercent"));
                     String cp = String.format("%.2f", changepercent);
+                    test.setText("(" + cp + "%)");
+                    iw = (ImageView) findViewById(R.id.stockTrendImage4);
                     if (change > 0)
-                        row4 = new StockVal("CHANGE", c + "(" + cp + "%)", "UP");
-                    else if (change < 0)
-                        row4 = new StockVal("CHANGE", c + "(" + cp + "%)", "DOWN");
-                    else
-                        row4 = new StockVal("CHANGE", c + "(" + cp + "%)", "");
-                    StockVal row5 = new StockVal("TIMESTAMP", jsonObject.getString("Timestamp"), "");
-                    StockVal row6;
+                        iw.setImageResource(R.drawable.up);
+                    if (change < 0)
+                        iw.setImageResource(R.drawable.down);
+                    if (change == 0)
+                        iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute5);
+                    test.setText("TIMESTAMP");
+                    test = (TextView) findViewById(R.id.stockValue5);
+                    test.setText(jsonObject.getString("Timestamp"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage5);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute6);
+                    test.setText("MARKETCAP");
+                    test = (TextView) findViewById(R.id.stockValue6);
                     double marketcap = Double.valueOf(jsonObject.getString("MarketCap"));
                     if (marketcap > 9999999) {
                         marketcap = marketcap / 1000000000;
                         String marketcapdisplay = String.format("%.2f", marketcap);
-                        row6 = new StockVal("MARKETCAP", marketcapdisplay + " Billion", "");
+                        test.setText(marketcapdisplay+"Billion");
                     } else {
                         marketcap = marketcap / 1000000;
                         String marketcapdisplay = String.format("%.2f", marketcap);
-                        row6 = new StockVal("MARKETCAP", marketcapdisplay + " Million", "");
+                        test.setText(marketcapdisplay+"Million");
                     }
-                    StockVal row7 = new StockVal("VOLUME", jsonObject.getString("Volume"), "");
-                    StockVal row8;
-                    change = Double.valueOf(jsonObject.getString("Change"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage6);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute7);
+                    test.setText("VOLUME");
+                    test = (TextView) findViewById(R.id.stockValue7);
+                    test.setText(jsonObject.getString("Volume"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage7);
+                    iw.setImageResource(R.drawable.trans);
+
+                    test = (TextView) findViewById(R.id.stockAttribute8);
+                    test.setText("CHANGETYD");
+                    test = (TextView) findViewById(R.id.stockValue8);
+                    change = Double.valueOf(jsonObject.getString("ChangeYTD"));
                     c = String.format("%.2f", change);
-                    changepercent = Double.valueOf(jsonObject.getString("ChangePercent"));
+                    changepercent = Double.valueOf(jsonObject.getString("ChangePercentYTD"));
                     cp = String.format("%.2f", changepercent);
+                    assert test != null;
+                    test.setText(c + "(" + cp + "%)");
+                    iw = (ImageView) findViewById(R.id.stockTrendImage8);
                     if (change > 0)
-                        row8 = new StockVal("CHANGE YTD", c + "(" + cp + "%)" , "UP");
-                    else if (change < 0)
-                        row8 = new StockVal("CHANGE YTD", c + "(" + cp + "%)" , "DOWN");
-                    else
-                        row8 = new StockVal("CHANGE YTD", c + "(" + cp + "%)" , "");
-                    StockVal row9 = new StockVal("HIGH", jsonObject.getString("High"), "");
-                    StockVal row10 = new StockVal("LOW", jsonObject.getString("Low"), "");
-                    StockVal row11 = new StockVal("OPEN", jsonObject.getString("Open"), "");
-                    StockVal row12 = new StockVal("IMAGE","","");
+                        iw.setImageResource(R.drawable.up);
+                    if (change < 0)
+                        iw.setImageResource(R.drawable.down);
+                    if (change == 0)
+                        iw.setImageResource(R.drawable.trans);
 
 
-                    list.add(row1);
-                    list.add(row2);
-                    list.add(row3);
-                    list.add(row4);
-                    list.add(row5);
-                    list.add(row6);
-                    list.add(row7);
-                    list.add(row8);
-                    list.add(row9);
-                    list.add(row10);
-                    list.add(row11);
-                    list.add(row12);
+                    test = (TextView) findViewById(R.id.stockAttribute9);
+                    test.setText("HIGH");
+                    test = (TextView) findViewById(R.id.stockValue9);
+                    test.setText(jsonObject.getString("High"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage9);
+                    iw.setImageResource(R.drawable.trans);
 
-                    StockInfoAdapter adapter = new StockInfoAdapter(getApplicationContext(), R.layout.stock_table, list);
-                    assert listView != null;
-                    listView.setAdapter(adapter);
+                    test = (TextView) findViewById(R.id.stockAttribute10);
+                    test.setText("LOW");
+                    test = (TextView) findViewById(R.id.stockValue10);
+                    test.setText(jsonObject.getString("Low"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage10);
+                    iw.setImageResource(R.drawable.trans);
 
+                    test = (TextView) findViewById(R.id.stockAttribute11);
+                    test.setText("OPEN");
+                    test = (TextView) findViewById(R.id.stockValue11);
+                    test.setText(jsonObject.getString("Open"));
+                    iw = (ImageView) findViewById(R.id.stockTrendImage11);
+                    iw.setImageResource(R.drawable.trans);
 
                 }
                 catch (JSONException e){
@@ -215,103 +267,9 @@ public class StockInfo extends AppCompatActivity {
         }
     }
 
-    public class StockVal{
-        String _Name;
-        String _Val;
-        String _Img;
-
-
-        public StockVal(String _Name, String _Val, String _Img) {
-            this._Name = _Name;
-            this._Val = _Val;
-            this._Img = _Img;
-        }
-
-        public String get_Name() {
-            return _Name;
-        }
-
-        public void set_Name(String _Name) {
-            this._Name = _Name;
-        }
-
-        public String get_Val() {
-            return _Val;
-        }
-
-        public void set_Val(String _Val) {
-            this._Val = _Val;
-        }
-
-        public String get_Img() {
-            return _Img;
-        }
-
-        public void set_Img(String _Img) {
-            this._Img = _Img;
-        }
-    }
-
-    public class StockInfoAdapter extends ArrayAdapter<StockVal>{
-
-        ArrayList<StockVal> StockInfoList;
-        int Resource;
-        Context context;
-        LayoutInflater vi;
-
-        public StockInfoAdapter(Context context, int resource, ArrayList<StockVal> objects) {
-            super(context, resource, objects);
-
-            StockInfoList = objects;
-            Resource = resource;
-            this.context = context;
-            vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        }
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent){
-
-            ViewHolder holder;
-            convertView = vi.inflate(Resource, null);
-            holder = new ViewHolder();
-            holder.imageView = (ImageView)convertView.findViewById(R.id.stockTrendImage);
-            holder.tvName = (TextView)convertView.findViewById(R.id.stockAttribute);
-            holder.tvValue = (TextView)convertView.findViewById(R.id.stockValue);
-            convertView.setTag(holder);
-
-            if(StockInfoList.get(position).get_Name().equals("IMAGE")) {
-
-            }
-            else {
-
-                if (StockInfoList.get(position).get_Img().equals("")) {
-                    holder.imageView.setImageResource(R.drawable.trans);
-                    holder.tvName.setText(StockInfoList.get(position).get_Name());
-                    holder.tvValue.setText(StockInfoList.get(position).get_Val());
-                } else if (StockInfoList.get(position).get_Img().equals("UP")) {
-                    holder.imageView.setImageResource(R.drawable.up);
-                    holder.tvName.setText(StockInfoList.get(position).get_Name());
-                    holder.tvValue.setText(StockInfoList.get(position).get_Val());
-                } else if (StockInfoList.get(position).get_Img().equals("DOWN")) {
-                    holder.imageView.setImageResource(R.drawable.down);
-                    holder.tvName.setText(StockInfoList.get(position).get_Name());
-                    holder.tvValue.setText(StockInfoList.get(position).get_Val());
-                }
-            }
 
 
 
-            return convertView;
-        }
-
-        class ViewHolder {
-            public ImageView imageView;
-            public TextView tvName;
-            public TextView tvValue;
-        }
-
-
-    }
 
     public class HighChartsFragment extends Fragment {
         public HighChartsFragment() {
@@ -320,10 +278,25 @@ public class StockInfo extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            // Inflate the layout for this fragment
             Log.i(TAG, "ACT2 HighChartsFragment.onCreateView");
+            View rootView = inflater.inflate(R.layout.fragment_high_charts, container, false);
+            HighChartsTask highChartsTask = new HighChartsTask();
 
-            return inflater.inflate(R.layout.fragment_high_charts, container, false);
+
+            return rootView;
+        }
+
+        private class HighChartsTask extends AsyncTask<String, Integer, String>{
+
+            @Override
+            protected String doInBackground(String... strings) {
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+            }
         }
     }
 

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <!--tools:context="com.adasari.stocksse.CurrentFragment">-->
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,20 +15,565 @@
         android:layout_marginTop="55dp"
         android:textStyle="bold"
         android:textColor="#000000"/>
-
-    <!--<TableLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
-        <!---->
-    <!--</TableLayout>-->
-
-    <ListView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:id="@+id/stockTable"
-        tools:listitem="@layout/stock_table">
-    </ListView>
+        android:layout_marginTop="83dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/currentStocks"
+                android:layout_centerHorizontal="true"
+                >
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row1">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute1"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage1"
+                            android:layout_below="@+id/stockAttribute1"
+                            android:layout_toEndOf="@+id/stockValue1"
+                            android:layout_marginTop="12dp" />
+
+                    </RelativeLayout>
+                </TableRow>
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row2">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute2"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage2"
+                            android:layout_below="@+id/stockAttribute2"
+                            android:layout_toEndOf="@+id/stockValue2"
+                            android:layout_marginTop="12dp" />
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row3">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute3"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage3"
+                            android:layout_below="@+id/stockAttribute3"
+                            android:layout_toEndOf="@+id/stockValue3"
+                            android:layout_marginTop="12dp" />
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row4">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute4"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage4"
+                            android:layout_below="@+id/stockAttribute4"
+                            android:layout_toEndOf="@+id/stockValue4"
+                            android:layout_marginTop="12dp" />
+
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row5">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute5"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage5"
+                            android:layout_below="@+id/stockAttribute5"
+                            android:layout_toEndOf="@+id/stockValue5"
+                            android:layout_marginTop="12dp" />
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row6">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute6"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage6"
+                            android:layout_below="@+id/stockAttribute6"
+                            android:layout_toEndOf="@+id/stockValue6"
+                            android:layout_marginTop="12dp" />
+
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row7">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute7"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage7"
+                            android:layout_below="@+id/stockAttribute7"
+                            android:layout_toEndOf="@+id/stockValue7"
+                            android:layout_marginTop="12dp" />
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row8">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute8"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage8"
+                            android:layout_below="@+id/stockAttribute8"
+                            android:layout_toEndOf="@+id/stockValue8"
+                            android:layout_marginTop="12dp" />
+
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row9">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute9"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage9"
+                            android:layout_below="@+id/stockAttribute9"
+                            android:layout_toEndOf="@+id/stockValue9"
+                            android:layout_marginTop="12dp" />
+
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row10">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute10"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage10"
+                            android:layout_below="@+id/stockAttribute10"
+                            android:layout_toEndOf="@+id/stockValue10"
+                            android:layout_marginTop="12dp" />
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/row11">
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding = "10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/stockAttribute11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#000"
+                            android:text="Stock Symbol Here"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/stockValue11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stockAttribute11"
+                            android:text="Stock Name Here "
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/stockTrendImage11"
+                            android:layout_below="@+id/stockAttribute11"
+                            android:layout_toEndOf="@+id/stockValue11"
+                            android:layout_marginTop="12dp" />
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <View android:layout_width="match_parent"
+                    android:background="#b3b3cb"
+                    android:layout_height="1dp" />
+
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/yahooImg"
+                    android:visibility="invisible"
+                    android:scaleType="fitXY"/>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 
 

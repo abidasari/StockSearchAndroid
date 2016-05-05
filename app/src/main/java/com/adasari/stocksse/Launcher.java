@@ -216,7 +216,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         protected void onPostExecute(String result) {
             try{
                 Intent inten = new Intent(getApplicationContext(), StockInfo.class);
-                inten.putExtra("Selected", selectedStock);
+                inten.putExtra("SelectedStockName", selectedStock);
                 inten.putExtra("JSONStockInfo", result);
                 Log.i(TAG, "ACT1-JSON RESULT - - - - - " + JSONResult);
                 Launcher.this.startActivity(inten);
@@ -285,16 +285,13 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                     FilterResults filterResults = new FilterResults();
                     JsonParse jp=new JsonParse();
                     if (constraint != null) {
-                        // A class that queries a web API, parses the data and
-                        // returns an ArrayList<GoEuroGetSet>
+
                         List<SuggestGetSet> new_suggestions = jp.getParseJsonWCF(constraint.toString());
                         suggestions.clear();
                         for (int i=0;i<new_suggestions.size();i++) {
                             suggestions.add(new_suggestions.get(i));
                         }
 
-                        // Now assign the values and count to the FilterResults
-                        // object
                         filterResults.values = suggestions;
                         filterResults.count = suggestions.size();
                     }
