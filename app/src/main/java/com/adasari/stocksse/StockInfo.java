@@ -1,8 +1,15 @@
 package com.adasari.stocksse;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Point;
+import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,36 +17,32 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.test.suitebuilder.TestMethod;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.webkit.WebView;
-import android.widget.ArrayAdapter;
 
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.util.Log;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import android.util.Log;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import android.view.MenuItem;
 import android.widget.TextView;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class StockInfo extends AppCompatActivity {
     private static final String TAG = "adasari";
@@ -121,6 +124,8 @@ public class StockInfo extends AppCompatActivity {
 
     @SuppressLint("ValidFragment")
     public class CurrentFragment extends Fragment {
+        private Animator mCurrentAnimator;
+        private int mShortAnimationDuration;
 
         public CurrentFragment() {
             // Required empty public constructor
@@ -131,30 +136,54 @@ public class StockInfo extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_current, container, false);
             Log.i(TAG, "ACT2 CurrentFragment.onCreateView");
             CurrentStockTask ctask = new CurrentStockTask();
-            ctask.execute("");
+            ctask.execute("http://chart.finance.yahoo.com/t?s="+selectedStockSymbol+"&lang=en-US&width=300&height=200"); //YAHOO Link here
+            mShortAnimationDuration = getResources().getInteger(android.R.integer.config_shortAnimTime);
             return rootView;
         }
 
-        private class CurrentStockTask extends AsyncTask<String, Integer, String>{
+
+        private class CurrentStockTask extends AsyncTask<String, Integer, Bitmap>{
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
             }
 
             @Override
-            protected String doInBackground(String... strings) {
-                String data = "";
+            protected Bitmap doInBackground(String... strings) {
+                String link = strings[0];
+                Bitmap mIcon11 = null;
                 try {
-                    data = JSONObjectString;
+                    String urldisplay = link;
+                    try {
+                        InputStream in = new java.net.URL(urldisplay).openStream();
+                        mIcon11 = BitmapFactory.decodeStream(in);
+                        Log.i(TAG_JSON, "ACT2-GOT YAHOO IMAGE");
+                    } catch (Exception e) {
+                        Log.e("Error", e.getMessage());
+                        e.printStackTrace();
+                    }
+                    return mIcon11;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                return data;
+                return mIcon11;
             }
 
             @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
+            protected void onPostExecute(final Bitmap t) {
+                super.onPostExecute(t);
+
+                ImageButton imageViewYahoo = (ImageButton) findViewById(R.id.yahooImg);
+                imageViewYahoo.setImageBitmap(t);
+                imageViewYahoo.setOnClickListener(new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                        Log.i(TAG, "HAHAHAHAHAHA");
+
+                    }
+                });
+
+                String s = JSONObjectString;
                 try{
 
                     JSONObject jsonObject = new JSONObject(s);
@@ -266,11 +295,12 @@ public class StockInfo extends AppCompatActivity {
                     iw = (ImageView) findViewById(R.id.stockTrendImage11);
                     iw.setImageResource(R.drawable.trans);
 
+
+
                 }
                 catch (JSONException e){
                     e.printStackTrace();
                 }
-
             }
         }
     }

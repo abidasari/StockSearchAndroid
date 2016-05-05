@@ -1,2 +1,7 @@
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$NewsFeedFragment$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$CurrentFragment$CurrentStockTask$1$override.class
 CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$HighChartsFragment$override.class
+CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$CurrentFragment$CurrentStockTask$override.class
 CHANGED,/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/adasari/stocksse/StockInfo$HighChartsFragment$HighChartsTask$override.class

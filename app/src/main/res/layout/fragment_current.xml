@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/container">
     <!--tools:context="com.adasari.stocksse.CurrentFragment">-->
 
     <!-- TODO: Update blank fragment layout -->
@@ -555,17 +556,46 @@
                             android:layout_marginTop="12dp" />
 
                     </RelativeLayout>
+
                 </TableRow>
 
                 <View android:layout_width="match_parent"
                     android:background="#b3b3cb"
                     android:layout_height="1dp" />
 
-                <ImageView
-                    android:layout_height="wrap_content"
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding = "10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/stockAttribute12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:textColor="#000"
+                        android:text=""
+                        android:textSize="12dp" />
+                    <TextView
+                        android:id="@+id/stockValue12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/stockAttribute12"
+                        android:text="Today's Stock Avtivity"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_marginTop="0dp"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_height="320dp"
+                    android:layout_width="wrap_content"
                     android:id="@+id/yahooImg"
-                    android:visibility="invisible"
                     android:scaleType="fitXY"/>
 
             </TableLayout>
