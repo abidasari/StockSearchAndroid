@@ -45,7 +45,7 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
     private AutoCompleteTextView actextview;
     private boolean validtextselectedfromlist = false;
     private String selectedStock;
-    public String JSONResult = "bleh";
+    public List<String> JSONResult = new ArrayList<>();
 
 
     @Override
@@ -73,8 +73,9 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                     Log.i(TAG, "ACT1-getQuotesButton.setOnClickListener.onClick - valid selection");
                     selectedStock = actextview.getText().toString();
                     String currentstocklink = "http://stocksearch-1276.appspot.com/stocksearch.php?stockselect=" + selectedStock;
+                    String currentNewsFeedLink = "http://stocksearch-1276.appspot.com/stocksearch.php?newsfeed=" + selectedStock;
                     Communicator ctask = new Communicator();
-                    ctask.execute(currentstocklink);
+                    ctask.execute(currentstocklink, currentNewsFeedLink);
                 }
                 else{
                     Log.i(TAG, "ACT1-getQuotesButton.setOnClickListener.onClick - invalid selection");
@@ -135,65 +136,13 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         }
     }
 
-    @Override
-    public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
-        Log.i(TAG, "ACT1-beforeTextChanged");
-    }
-
-    @Override
-    public void afterTextChanged(final Editable s) {
-        Log.i(TAG, "ACT1-afterTextChanged");
-    }
-
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "ACT1-onPause");
-    }
-
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "ACT1-onStop");
-    }
-
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i(TAG, "ACT1-onRestart");
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "ACT1-onDestroy");
-    }
-
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        Log.i(TAG, "ACT1-onSaveInstanceState");
-    }
-
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.i(TAG, "ACT1-onRestoreInstanceState");
-    }
-
-    class Communicator extends AsyncTask<String, String, String> {
+    class Communicator extends AsyncTask<String, String, List<String>> {
 
         @Override
-        protected String doInBackground(String... params) {
-
+        protected List<String> doInBackground(String... params) {
             String link = params[0];
-            String data = "";
+            String newsLink = params[1];
+            List<String> data = new ArrayList<String>();
             try {
                 URL url = new URL(link);
                 HttpURLConnection conn = null;
@@ -201,21 +150,25 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                 conn.connect();
                 InputStream is = conn.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-                data = reader.readLine();
-                Launcher.this.JSONResult = data;
+                data.add(reader.readLine());
+//                Launcher.this.JSONResult = data;
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            Launcher.this.JSONResult = data;
             return data;
         }
 
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(List<String> result) {
             try{
                 Intent inten = new Intent(getApplicationContext(), StockInfo.class);
                 inten.putExtra("SelectedStockName", selectedStock);
-                inten.putExtra("JSONStockInfo", result);
+                inten.putExtra("JSONStockInfo", result.get(0));
                 Log.i(TAG, "ACT1-JSON RESULT - - - - - " + JSONResult);
+
+
                 Launcher.this.startActivity(inten);
             }
             catch (Exception e){
@@ -234,6 +187,8 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
 
         }
     }
+
+
     public class SuggestionAdapter extends ArrayAdapter<SuggestGetSet> {
         protected static final String TAG = "SuggestionAdapter";
         private List<SuggestGetSet> suggestions;
@@ -305,6 +260,58 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
             };
             return myFilter;
         }
+    }
+
+    @Override
+    public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
+        Log.i(TAG, "ACT1-beforeTextChanged");
+    }
+
+    @Override
+    public void afterTextChanged(final Editable s) {
+        Log.i(TAG, "ACT1-afterTextChanged");
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "ACT1-onPause");
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG, "ACT1-onStop");
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(TAG, "ACT1-onRestart");
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "ACT1-onDestroy");
+    }
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "ACT1-onSaveInstanceState");
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(TAG, "ACT1-onRestoreInstanceState");
     }
 
 

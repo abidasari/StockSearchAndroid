@@ -388,6 +388,8 @@ public class StockInfo extends AppCompatActivity {
 
             @Override
             protected String doInBackground(String... strings) {
+                Log.i(TAG, "ACT2 News Feed JSON Background");
+
                 String link = strings[0];
                 String data = "";
                 try {
@@ -398,7 +400,6 @@ public class StockInfo extends AppCompatActivity {
                     InputStream is = conn.getInputStream();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
                     data = reader.readLine();
-
                     StockInfo.this.JSONResultNewsFeed = data;
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -409,14 +410,19 @@ public class StockInfo extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 try {
-                    Log.i(TAG, s);
+
                     JSONObject jsonObject = new JSONObject(JSONResultNewsFeed);
-                    JSONArray res = jsonObject.getJSONArray("results");
+                    Log.i(TAG, "ACT2 News Feed got JSON == " + jsonObject);
+
+                    JSONObject jsonObject1 = jsonObject.getJSONObject("d");
+                    Log.i(TAG, "ACT2 News Feed got JSON 'd' == " + jsonObject1);
+
+                    JSONArray res = jsonObject1.getJSONArray("results");
+                    Log.i(TAG, "ACT2 NewsFeed res Array = " + res);
+
                     ListView newslistView = (ListView) findViewById(R.id.newsFeed);
-                    Log.i(TAG, JSONResultNewsFeed);
 
-
-                    ArrayList<Spanned> newslist = new ArrayList<Spanned>();
+                    ArrayList<Spanned> newslist = new ArrayList<>();
                     int i;
                     for (i = 0; i < res.length(); i++) {
                         JSONObject obj = res.getJSONObject(i);
@@ -427,7 +433,8 @@ public class StockInfo extends AppCompatActivity {
                         String date = obj.getString("Date");
                         DateTime dt = DateTime.parse(date);
                         String news_date = dt.toString("dd MMMM YYYY, HH:mm:ss");
-                        newslist.add(Html.fromHtml("<b><big><big><a href='" + url + "'>" + title + "</a></big></big></b><br>" + description + "<br><h5>Publisher:" + publisher + "<br>Date:" + news_date + "</h5>"));
+                        Log.i(TAG, "ACT 2 ********* " + "<b><big><big><a href='" + url + "'>" + title + "</a></big></big></b><br>" + description + "<br><h5>Publisher:" + publisher + "<br>Date:" + news_date + "</h5>");
+                        newslist.add(Html.fromHtml("<b><big><big><span style='color:black'><a href='" + url + "'>" + title + "</a></span></big></big></b><br>" + description + "<br><h5>Publisher:" + publisher + "<br>Date:" + news_date + "</h5>"));
                     }//end of for
                     ArrayAdapter<Spanned> adapter = new ArrayAdapter<Spanned>(StockInfo.this, R.layout.newsfeed, newslist) {
                         @Override
@@ -440,6 +447,8 @@ public class StockInfo extends AppCompatActivity {
                     };
                     newslistView.setAdapter(adapter);
                 } catch (JSONException e) {
+                    Log.i(TAG, "ACT2 News Feed Excpn Caught JSON");
+
                     e.printStackTrace();
                 }
             }

@@ -14,5 +14,7 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textColorLink="#000000"
         android:id="@+id/newsFeed"></ListView>
 </FrameLayout>
