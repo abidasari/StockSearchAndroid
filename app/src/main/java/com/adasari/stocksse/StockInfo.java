@@ -66,6 +66,8 @@ public class StockInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stock_info);
+        Log.i(TAG, "ACT2-onCreate");
+
         JodaTimeAndroid.init(this);
 
         Bundle launcherData = getIntent().getExtras();
@@ -81,13 +83,13 @@ public class StockInfo extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Log.i(TAG, "ACT2-onCreate");
-
         Bundle receivedStock = getIntent().getExtras();
         if (receivedStock == null) {
             return;
         }
         selectedStock = receivedStock.getString("Selected");
+
+        //Got the intent data from the first act.
 
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
@@ -325,7 +327,6 @@ public class StockInfo extends AppCompatActivity {
                     test.setText(jsonObject.getString("Open"));
                     iw = (ImageView) findViewById(R.id.stockTrendImage11);
                     iw.setImageResource(R.drawable.trans);
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();

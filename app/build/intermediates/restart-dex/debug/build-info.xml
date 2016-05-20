@@ -4,29 +4,48 @@
     api-level="22"
     density="xxhdpi"
     format="7"
-    timestamp="206659891890727" >
+    timestamp="229756503561890" >
 
     <task
         name="javac"
-        duration="11011" />
+        duration="1214" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="431" />
+        duration="221" />
     <task
         name="verifier"
-        duration="64" />
+        duration="57" />
 
     <artifact
-        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+        type="DEX" />
 
-    <build timestamp="206659891890727" >
+    <build timestamp="228698505787501" >
         <artifact
             location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="229019723908292" >
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="229756503561890" >
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

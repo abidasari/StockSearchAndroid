@@ -20,12 +20,12 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_big_media_narrow.xml"
-    },
-    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
