@@ -6,9 +6,408 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
+                    "endLine": 5,
+                    "endColumn": 14,
+                    "endOffset": 361
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endLine": 5,
+                        "endColumn": 14,
+                        "endOffset": 361
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 366,
+                    "endLine": 9,
+                    "endColumn": 14,
+                    "endOffset": 630
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 366,
+                        "endLine": 9,
+                        "endColumn": 14,
+                        "endOffset": 630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 635,
+                    "endLine": 13,
+                    "endColumn": 14,
+                    "endOffset": 904
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 635,
+                        "endLine": 13,
+                        "endColumn": 14,
+                        "endOffset": 904
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 909,
+                    "endLine": 17,
+                    "endColumn": 14,
+                    "endOffset": 1183
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 909,
+                        "endLine": 17,
+                        "endColumn": 14,
+                        "endOffset": 1183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1188,
+                    "endLine": 21,
+                    "endColumn": 14,
+                    "endOffset": 1444
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1188,
+                        "endLine": 21,
+                        "endColumn": 14,
+                        "endOffset": 1444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1449,
+                    "endLine": 25,
+                    "endColumn": 14,
+                    "endOffset": 1714
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1449,
+                        "endLine": 25,
+                        "endColumn": 14,
+                        "endOffset": 1714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1719,
+                    "endLine": 29,
+                    "endColumn": 14,
+                    "endOffset": 1991
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1719,
+                        "endLine": 29,
+                        "endColumn": 14,
+                        "endOffset": 1991
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1996,
+                    "endLine": 33,
+                    "endColumn": 14,
+                    "endOffset": 2274
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1996,
+                        "endLine": 33,
+                        "endColumn": 14,
+                        "endOffset": 2274
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2279,
+                    "endLine": 37,
+                    "endColumn": 14,
+                    "endOffset": 2522
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2279,
+                        "endLine": 37,
+                        "endColumn": 14,
+                        "endOffset": 2522
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2527,
+                    "endLine": 41,
+                    "endColumn": 14,
+                    "endOffset": 2778
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2527,
+                        "endLine": 41,
+                        "endColumn": 14,
+                        "endOffset": 2778
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2783,
+                    "endLine": 45,
+                    "endColumn": 14,
+                    "endOffset": 3036
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2783,
+                        "endLine": 45,
+                        "endColumn": 14,
+                        "endOffset": 3036
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3041,
+                    "endLine": 49,
+                    "endColumn": 14,
+                    "endOffset": 3291
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 3041,
+                        "endLine": 49,
+                        "endColumn": 14,
+                        "endOffset": 3291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 3296,
+                    "endLine": 53,
+                    "endColumn": 14,
+                    "endOffset": 3553
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 3296,
+                        "endLine": 53,
+                        "endColumn": 14,
+                        "endOffset": 3553
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 3558,
+                    "endLine": 57,
+                    "endColumn": 14,
+                    "endOffset": 3821
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 3558,
+                        "endLine": 57,
+                        "endColumn": 14,
+                        "endOffset": 3821
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 3826,
+                    "endLine": 61,
+                    "endColumn": 14,
+                    "endOffset": 4093
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 3826,
+                        "endLine": 61,
+                        "endColumn": 14,
+                        "endOffset": 4093
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 4098,
+                    "endLine": 65,
+                    "endColumn": 14,
+                    "endOffset": 4346
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 4098,
+                        "endLine": 65,
+                        "endColumn": 14,
+                        "endOffset": 4346
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 4351,
+                    "endLine": 69,
+                    "endColumn": 14,
+                    "endOffset": 4609
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 4351,
+                        "endLine": 69,
+                        "endColumn": 14,
+                        "endOffset": 4609
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 4614,
+                    "endLine": 73,
+                    "endColumn": 14,
+                    "endOffset": 4882
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 4614,
+                        "endLine": 73,
+                        "endColumn": 14,
+                        "endOffset": 4882
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 4887,
+                    "endLine": 77,
+                    "endColumn": 14,
+                    "endOffset": 5155
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 4,
+                        "startOffset": 4887,
+                        "endLine": 77,
+                        "endColumn": 14,
+                        "endOffset": 5155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 5160,
                     "endColumn": 107,
-                    "endOffset": 158
+                    "endOffset": 5263
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -23,11 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 163,
+                    "startOffset": 5268,
                     "endColumn": 107,
-                    "endOffset": 266
+                    "endOffset": 5371
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -42,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 271,
+                    "startOffset": 5376,
                     "endColumn": 122,
-                    "endOffset": 389
+                    "endOffset": 5494
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -61,11 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 394,
+                    "startOffset": 5499,
                     "endColumn": 106,
-                    "endOffset": 496
+                    "endOffset": 5601
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -80,11 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 501,
+                    "startOffset": 5606,
                     "endColumn": 113,
-                    "endOffset": 610
+                    "endOffset": 5715
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -99,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 615,
+                    "startOffset": 5720,
                     "endColumn": 87,
-                    "endOffset": 698
+                    "endOffset": 5803
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -118,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 703,
+                    "startOffset": 5808,
                     "endColumn": 102,
-                    "endOffset": 801
+                    "endOffset": 5906
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -137,11 +536,11 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 806,
+                    "startOffset": 5911,
                     "endColumn": 126,
-                    "endOffset": 928
+                    "endOffset": 6033
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -156,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 933,
+                    "startOffset": 6038,
                     "endColumn": 79,
-                    "endOffset": 1008
+                    "endOffset": 6113
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -175,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 1013,
+                    "startOffset": 6118,
                     "endColumn": 79,
-                    "endOffset": 1088
+                    "endOffset": 6193
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -194,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 1093,
+                    "startOffset": 6198,
                     "endColumn": 85,
-                    "endOffset": 1174
+                    "endOffset": 6279
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -213,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 1179,
+                    "startOffset": 6284,
                     "endColumn": 103,
-                    "endOffset": 1278
+                    "endOffset": 6383
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -232,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 1283,
+                    "startOffset": 6388,
                     "endColumn": 105,
-                    "endOffset": 1384
+                    "endOffset": 6489
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -251,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 1389,
+                    "startOffset": 6494,
                     "endColumn": 97,
-                    "endOffset": 1482
+                    "endOffset": 6587
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -270,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 1487,
+                    "startOffset": 6592,
                     "endColumn": 106,
-                    "endOffset": 1589
+                    "endOffset": 6694
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -289,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 1594,
+                    "startOffset": 6699,
                     "endColumn": 105,
-                    "endOffset": 1695
+                    "endOffset": 6800
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -308,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 1700,
+                    "startOffset": 6805,
                     "endColumn": 105,
-                    "endOffset": 1801
+                    "endOffset": 6906
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -327,11 +726,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 1806,
+                    "startOffset": 6911,
                     "endColumn": 119,
-                    "endOffset": 1921
+                    "endOffset": 7026
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -346,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 1926,
+                    "startOffset": 7031,
                     "endColumn": 95,
-                    "endOffset": 2017
+                    "endOffset": 7122
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",
@@ -365,11 +764,87 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 2022,
+                    "startOffset": 7127,
+                    "endColumn": 65,
+                    "endOffset": 7188
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 5160,
+                        "endColumn": 65,
+                        "endOffset": 5221
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 7193,
+                    "endColumn": 128,
+                    "endOffset": 7317
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 5226,
+                        "endColumn": 128,
+                        "endOffset": 5350
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 7322,
+                    "endColumn": 126,
+                    "endOffset": 7444
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 5355,
+                        "endColumn": 126,
+                        "endOffset": 5477
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 7449,
+                    "endColumn": 150,
+                    "endOffset": 7595
+                },
+                "from": {
+                    "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/res/values-zu/values-zu.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 4,
+                        "startOffset": 5482,
+                        "endColumn": 150,
+                        "endOffset": 5628
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 7600,
                     "endColumn": 100,
-                    "endOffset": 2118
+                    "endOffset": 7696
                 },
                 "from": {
                     "file": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-zu/values-zu.xml",

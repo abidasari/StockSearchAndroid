@@ -1,2 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.3.0_c1cae82b3c4ccf7297357cd53c90ebebaa258da3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.3.0_bc558216f341b176c1efdd32f9c99371a6ff6526/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.3/5d506d4238dd8a1d1c8a1188ffb819a2f2eb286d/joda-time-2.9.3-no-tzdb.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5d506d4238dd8a1d1c8a1188ffb819a2f2eb286d">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/joda-time-2.9.3-no-tzdb_9f4c354b95c72869f4c952233636ce9a6f2d1e23/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.3.0_327d2cea736f21715689cb7da276286af88f4f98/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.3.0_f9788c01a4c282945f5efc3a298952d1257c0d53/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.3.0_13a1072e7b1147e76c61fae69e7fa081f33ad5c0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a9bf02428b748c8e728fda0c068e53ccb519fad">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87762d4632eac2a55221192f54403a6045fcb8fa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/net.danlew/android.joda/2.9.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="87714d074681677b8e418ee36b1d11cde180f78e">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.danlew-android.joda-2.9.3_6b8a9094baf6d06b7ed806266548039de5c24b47/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.3.0_a9c1553ba4a48b7c8188465af70a83d1d4b367d9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.4.0_bd8631e2cc0104a731b57f492be5c7eabe3a6d45/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9703343d8498b0cd6ea29f7a6ef343b849bd1ef4">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1b0e725571b41325e21bbb11a692ae952f138ce6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.3.0_c0d36c167dbc78691f6b78f09daafdbd58ff71a0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.3.0_31fd2b6bce31209148e5a79bed32f5dbba85b890/classes.dex" />
+    </item>
+    <item
+        jar="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.github.chrisbanes/PhotoView/1.2.6/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e39dd45427d2ba136c82ed1946f80dd3dff16695">
+        <dex dex="/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.chrisbanes-PhotoView-1.2.6_c22f9a6831336bcdc279c302272fe785d76b70df/classes.dex" />
+    </item>
+
+</items>

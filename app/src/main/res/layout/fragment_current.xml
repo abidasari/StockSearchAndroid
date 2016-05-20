@@ -1,11 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/container">
-    <!--tools:context="com.adasari.stocksse.CurrentFragment">-->
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/currentStocks"
         android:layout_width="match_parent"
@@ -603,8 +600,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-
-
 
 </RelativeLayout>

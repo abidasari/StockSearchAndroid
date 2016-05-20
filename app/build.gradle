@@ -27,4 +27,5 @@ dependencies {
     compile 'com.android.support:support-v4:23.3.0'
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     compile "com.squareup.picasso:picasso:2.4.0"
+    compile 'net.danlew:android.joda:2.9.3'
 }

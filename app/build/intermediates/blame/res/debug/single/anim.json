@@ -24,12 +24,12 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/anim/design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/anim/abc_grow_fade_in_from_bottom.xml"
-    },
-    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",

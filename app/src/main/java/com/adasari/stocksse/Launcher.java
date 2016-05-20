@@ -61,7 +61,6 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         Button getQuotesButton = (Button)findViewById(R.id.getQuotesButton);
 
         actextview = (AutoCompleteTextView) findViewById(R.id.autoComplete);
-        assert actextview != null;
         SuggestionAdapter suggestionAdapter = new SuggestionAdapter(this, R.layout.autocomplete_view, actextview.getText().toString());
         actextview.setAdapter(suggestionAdapter);
         actextview.setOnItemClickListener(this);
@@ -134,8 +133,6 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
         else{
             Log.i(TAG, "ACT1-Validation Failed" );
         }
-
-        //Item not selected from the list
     }
 
     @Override
@@ -291,7 +288,6 @@ public class Launcher extends AppCompatActivity implements TextWatcher, OnItemCl
                         for (int i=0;i<new_suggestions.size();i++) {
                             suggestions.add(new_suggestions.get(i));
                         }
-
                         filterResults.values = suggestions;
                         filterResults.count = suggestions.size();
                     }

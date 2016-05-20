@@ -8,12 +8,12 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/src/main/res/layout/stock_table.xml"
     },
     {
-        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
@@ -100,6 +100,10 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/newsfeed.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/src/main/res/layout/newsfeed.xml"
+    },
+    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_mode_bar.xml"
     },
@@ -136,12 +140,12 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_multichoice_material.xml"
-    },
-    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
@@ -152,12 +156,12 @@
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_menu_layout.xml"
-    },
-    {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/Users/adasari/AndroidStudioProjects/StocksSE2/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
